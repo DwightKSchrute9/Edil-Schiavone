@@ -7,13 +7,17 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChiSiamoComponent } from './chi-siamo/chi-siamo.component';
+import { ServiziComponent } from './servizi/servizi.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    ChiSiamoComponent,
+    ServiziComponent
   ],
   imports: [
     BrowserModule,

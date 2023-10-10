@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { ChiSiamoComponent } from './chi-siamo/chi-siamo.component';
+import { ServiziComponent } from './servizi/servizi.component'; // Importa le altre componenti necessarie
 
 const routes: Routes = [
-
-  { path: 'home', component: HomeComponent },
-
-{ path: '', redirectTo: '/home', pathMatch: 'full' },
-
-
+  { path: 'chi-siamo', component: ChiSiamoComponent },
+  { path: 'servizi', component: ServiziComponent },
+  // Aggiungi le altre rotte per le tue sezioni
 ];
 
 @NgModule({

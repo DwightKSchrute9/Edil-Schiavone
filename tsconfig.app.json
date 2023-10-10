@@ -3,7 +3,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": ["jquery"] // Assicurati che ci sia "jquery" qui
+    "types": [
+      "@angular/localize"
+    ]
   },
   "files": [
     "src/main.ts"
