@@ -1,36 +1,47 @@
 <header class="header">
   <nav class="et-hero-tabs">
-    <h1>STICKY SLIDER NAV</h1>
-    <h3>Sliding content with sticky tab nav</h3>
-    <div class="et-hero-tabs-container">
-      <a href="#chi-siamo" class="et-hero-tab">Chi siamo</a>
-      <a href="#servizi" class="et-hero-tab">Servizi</a>
-      <a href="#progetti" class="et-hero-tab">Progetti</a>
-      <a href="#contatti" class="et-hero-tab">Contatti</a>
-      <a href="#sostenibilita" class="et-hero-tab">Sostenibilità</a>
-      <span class="et-hero-tab-slider"></span>
+
+    <div class="container">
+      <div class="carousel-container">
+        <ngb-carousel *ngIf="images.length > 0">
+          <ng-template ngbSlide *ngFor="let image of images">
+            <img [src]="image.src" [alt]="image.alt" class="d-block w-100" />
+          </ng-template>
+        </ngb-carousel>
+      </div>
     </div>
   </nav>
+  <div class="et-hero-tabs-container" [class.et-hero-tabs-container--sticky]="isSticky && isScrolled"
+  [class.et-hero-tabs-container--hidden]="isHidden">
+  <a href="#chi-siamo" class="et-hero-tab">Chi siamo</a>
+  <a href="#servizi" class="et-hero-tab">Servizi</a>
+  <a href="#progetti" class="et-hero-tab">Progetti</a>
+  <a href="#contatti" class="et-hero-tab">Contatti</a>
+  <a href="#sostenibilita" class="et-hero-tab">Sostenibilità</a>
+  <span class="et-hero-tab-slider"></span>
+</div>
 </header>
 
+
+
 <main class="et-main">
-  <section id="chi-siamo">
+  <section id="chi-siamo" class="et-slide">
     <h1>Chi siamo</h1>
     <h3>something about chi-siamo</h3>
   </section>
-  <section id="servizi">
+  <section id="servizi" class="et-slide">
     <h1>Servizi</h1>
     <h3>something about servizi</h3>
   </section>
-  <section id="progetti">
+  <section id="progetti" class="et-slide">
     <h1>Progetti</h1>
     <h3>something about progetti</h3>
   </section>
-  <section id="contatti">
+  <section id="contatti" class="et-slide">
     <h1>Contatti</h1>
     <h3>something about contatti</h3>
   </section>
-  <section id="sostenibilita">
+  <section id="sostenibilita" class="et-slide">
     <h1>Sostenibilità</h1>
     <h3>something about sostenibilità</h3>
   </section>
