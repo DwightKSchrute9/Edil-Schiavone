@@ -1,0 +1,18 @@
+// Stili globali
+
+// Imposta altezza minima per garantire spazio per header e footer
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// Stile per il main content
+.main-content {
+  min-height: calc(100% - 100px); // Regola l'altezza in base all'altezza del tuo header e footer
+  padding-top: 50px; // Altezza del tuo header
+  padding-bottom: 50px; // Altezza del tuo footer
+
+  // Altri stili per il main content
+  // ...
+}
