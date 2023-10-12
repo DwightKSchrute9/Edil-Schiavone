@@ -1,1 +1,7 @@
-<p>chi-siamo works!</p>
+<div class="carousel-container">
+  <ngb-carousel *ngIf="images.length > 0" >
+    <ng-template ngbSlide *ngFor="let image of images">
+      <img [src]="image.src" [alt]="image.alt" class="d-block w-100" />
+    </ng-template>
+  </ngb-carousel>
+</div>

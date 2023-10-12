@@ -1,26 +1,54 @@
-<header class="header">
-  <nav class="et-hero-tabs">
 
-    <div class="container">
-      <div class="carousel-container">
-        <ngb-carousel *ngIf="images.length > 0">
-          <ng-template ngbSlide *ngFor="let image of images">
-            <img [src]="image.src" [alt]="image.alt" class="d-block w-100" />
-          </ng-template>
-        </ngb-carousel>
-      </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <img id="immagineElastico" src="./assets/logo.png" class="d-block mx-auto img-fluid p-0 custom-image" alt="logoSky">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Voci di navigazione nella modalità desktop -->
+    <div class="collapse navbar-collapse" id="navbarNavDarkDesktop">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#chi-siamo">Chi siamo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#servizi">Servizi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#progetti">Progetti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contatti">Contatti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sostenibilita">Sostenibilità</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-  <div class="et-hero-tabs-container" [class.et-hero-tabs-container--sticky]="isSticky && isScrolled"
-  [class.et-hero-tabs-container--hidden]="isHidden">
-  <a href="#chi-siamo" class="et-hero-tab">Chi siamo</a>
-  <a href="#servizi" class="et-hero-tab">Servizi</a>
-  <a href="#progetti" class="et-hero-tab">Progetti</a>
-  <a href="#contatti" class="et-hero-tab">Contatti</a>
-  <a href="#sostenibilita" class="et-hero-tab">Sostenibilità</a>
-  <span class="et-hero-tab-slider"></span>
-</div>
-</header>
+
+    <!-- Voci di navigazione nel dropdown per la modalità mobile -->
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+        <li ngbDropdown class="nav-item dropdown">
+          <button class="btn btn-dark dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>
+            EDIL 2000
+          </button>
+          <ul ngbDropdownMenu class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownBasic1">
+            <li><a ngbDropdownItem routerLink="/chi-siamo">Chi siamo</a></li>
+            <li><a ngbDropdownItem routerLink="/servizi">Servizi</a></li>
+            <li><a ngbDropdownItem routerLink="/progetti">Progetti</a></li>
+            <li><a ngbDropdownItem routerLink="/contatti">Contatti</a></li>
+            <li><a ngbDropdownItem routerLink="/sostenibilita">Sostenibilità</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
 
 
@@ -28,6 +56,7 @@
   <section id="chi-siamo" class="et-slide">
     <h1>Chi siamo</h1>
     <h3>something about chi-siamo</h3>
+
   </section>
   <section id="servizi" class="et-slide">
     <h1>Servizi</h1>

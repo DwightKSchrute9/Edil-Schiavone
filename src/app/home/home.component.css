@@ -1,0 +1,57 @@
+.skyscraper-container {
+  background: linear-gradient(200deg, hsl(190, 10%, 10%), hsl(220, 30%, 30%)) no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  padding: 0 1vw;
+  position: relative;
+  z-index: 0;
+}
+.skyscraper-container form {
+  display: grid;
+  gap: 1vw;
+  grid-auto-flow: column;
+  max-height: 85vh;
+  padding: 2vh 0;
+  position: relative;
+  z-index: 1;
+}
+.skyscraper-container form fieldset {
+  background: hsl(190, 10%, 10%);
+  border: 0;
+  display: grid;
+  gap: var(--gap, 2vw);
+  grid-template-columns: repeat(var(--windows, 4), 1fr);
+  margin: 0;
+  padding: var(--p, 3vw 2vw);
+  position: relative;
+}
+.skyscraper-container form fieldset [type=checkbox] {
+  all: unset;
+  aspect-ratio: 1/1.25;
+  background: hsl(190, 10%, 20%);
+  transition: background 0.3s ease-in;
+  width: 100%;
+}
+.skyscraper-container form fieldset [type=checkbox]:checked {
+  background: #ffffae;
+}
+
+@media (max-width: 768px) {
+  .skyscraper-container body {
+    background: linear-gradient(200deg, hsl(190, 10%, 10%), hsl(220, 30%, 30%)) no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    padding: 0 1vw;
+  }
+  .skyscraper-container form {
+    display: grid;
+    gap: 1vw;
+    grid-auto-flow: column;
+    max-height: 100%;
+    padding: 2vh 0;
+  }
+}/*# sourceMappingURL=home.component.css.map */

@@ -1,5 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,38 +6,61 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
   isSticky: boolean = false;
   isHidden: boolean = false;
-  isScrolled:boolean = false;
+  imagesLoaded = false;
+
+  @ViewChild('etHeroTabsContainer')
+  etHeroTabsContainer!: ElementRef;
+
+  isMobileView = false; // Aggiungi questa variabile per gestire la vista mobile
 
   images = [
     {
-      src: 'assets/wright1.jpg', // Percorso relativo all'immagine 1
-      alt: 'Descrizione immagine 1'
+      src: 'assets/wright1.jpg',
+      alt: 'Descrizione immagine 1',
     },
     {
-      src: 'assets/wright3.jpg', // Percorso relativo all'immagine 2
-      alt: 'Descrizione immagine 2'
+      src: 'assets/wright3.jpg',
+      alt: 'Descrizione immagine 2',
     },
     // Aggiungi altre immagini
   ];
 
+  ngOnInit(): void {
+    this.checkMobileView();
+  }
+
+  checkMobileView() {
+    const screenWidth = window.innerWidth;
+    this.isMobileView = screenWidth < 768; // Adatta la larghezza in base alle tue esigenze
+  }
+
+  handleImagesLoaded() {
+    this.imagesLoaded = true;
+  }
+
+  showTabs() {
+    this.isHidden = false;
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
+    this.checkMobileView(); // Aggiorna la vista mobile durante lo scorrimento
+
     const scrollPosition = window.scrollY;
-    const triggerPosition = 100; // Posizione in pixel da cui far diventare sticky il div
+    const triggerPosition = 100;
 
-    this.isSticky = scrollPosition >= triggerPosition;
-
-    // Aggiungi questa condizione per nascondere la navbar quando scorri verso il basso
-    if (scrollPosition > triggerPosition) {
-      this.isHidden = scrollPosition > triggerPosition + 50; // Nascondi la navbar solo quando hai scrollato di 50px in basso
+    if (this.imagesLoaded && scrollPosition > triggerPosition) {
+      this.isSticky = true;
     } else {
-      this.isHidden = false; // Mostra la navbar quando scorri verso l'alto
+      this.isSticky = false;
+    }
+
+    if (this.imagesLoaded && scrollPosition > triggerPosition) {
+      this.isHidden = scrollPosition > triggerPosition + 50;
+    } else {
+      this.isHidden = false;
     }
   }
 }
