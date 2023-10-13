@@ -1,14 +1,14 @@
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top">
   <div class="container-fluid">
-    <img id="immagineElastico" src="./assets/logo.png" class="d-block mx-auto img-fluid p-0 custom-image" alt="logoSky">
+    <img id="immagineElastico" src="./assets/logo.png" class="d-block mx-auto img-fluid p-0 custom-image" alt="logoEdil2000">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Voci di navigazione nella modalità desktop -->
+
     <div class="collapse navbar-collapse" id="navbarNavDarkDesktop">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -30,12 +30,13 @@
     </div>
 
     <!-- Voci di navigazione nel dropdown per la modalità mobile -->
-    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+    <!-- <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
       <ul class="navbar-nav">
         <li ngbDropdown class="nav-item dropdown">
-          <button class="btn btn-dark dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>
-            EDIL 2000
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
+
           <ul ngbDropdownMenu class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownBasic1">
             <li><a ngbDropdownItem routerLink="/chi-siamo">Chi siamo</a></li>
             <li><a ngbDropdownItem routerLink="/servizi">Servizi</a></li>
@@ -45,9 +46,39 @@
           </ul>
         </li>
       </ul>
-    </div>
-  </div>
+    </div> -->
+
+        <!-- Voci di navigazione nel dropdown per la modalità mobile -->
+        <div class="collapse " id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li ngbDropdown class="nav-item dropdown">
+              <!-- Inserisci qui le tue voci di navigazione per dispositivi mobili -->
+                <!-- Dropdown menu -->
+      <ul ngbDropdownMenu class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownBasic1">
+        <li><a ngbDropdownItem routerLink="/chi-siamo">Chi siamo</a></li>
+        <li><a ngbDropdownItem routerLink="/servizi">Servizi</a></li>
+        <li><a ngbDropdownItem routerLink="/progetti">Progetti</a></li>
+        <li><a ngbDropdownItem routerLink="/contatti">Contatti</a></li>
+        <li><a ngbDropdownItem routerLink="/sostenibilita">Sostenibilità</a></li>
+      </ul>
+    </li>
+  </ul>
+
+        </div>
+      </div>
 </nav>
+
+<!-- <div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Menu item</a></li>
+  </ul>
+</div> -->
+
 
 
 
