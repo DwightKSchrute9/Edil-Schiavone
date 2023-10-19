@@ -1,0 +1,19 @@
+/* chi-siamo.component.css */
+#chi-siamo {
+  position: relative;
+  // background-image: url('url-dell-immagine.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.9); /* Sfondo opaco sopra l'immagine */
+  padding: 20px;
+}
+
+.section {
+  padding: 20px;
+  /* Altri stili per le sezioni */
+}

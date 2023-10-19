@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,10 @@ import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent  {
+  constructor(private router: Router) {}
+  navigateToSection(sectionId: string) {
+    this.router.navigate([sectionId]);
+  }
   // isSticky: boolean = false;
   // isHidden: boolean = false;
   // imagesLoaded = false;

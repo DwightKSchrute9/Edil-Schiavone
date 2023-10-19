@@ -83,26 +83,47 @@
 
 
 
+<!-- header.component.html -->
 <main class="et-main">
   <section id="chi-siamo" class="et-slide">
     <h1>Chi siamo</h1>
     <h3>something about chi-siamo</h3>
-
+    <button (click)="navigateToSection('chi-siamo')">Scopri di più</button>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <img src="image1.jpg" alt="Image 1" />
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="image2.jpg" alt="Image 2" />
+      </ng-template>
+    </ngb-carousel>
   </section>
   <section id="servizi" class="et-slide">
     <h1>Servizi</h1>
-    <h3>something about servizi</h3>
+    <h3>something about chi-siamo</h3>
+    <button (click)="navigateToSection('servizi')">Scopri di più</button>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <img src="image1.jpg" alt="Image 1" />
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="image2.jpg" alt="Image 2" />
+      </ng-template>
+    </ngb-carousel>
   </section>
   <section id="progetti" class="et-slide">
     <h1>Progetti</h1>
     <h3>something about progetti</h3>
+    <button (click)="navigateToSection('progetti')">Scopri di più</button>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <img src="image1.jpg" alt="Image 1" />
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="image2.jpg" alt="Image 2" />
+      </ng-template>
+    </ngb-carousel>
   </section>
-  <section id="contatti" class="et-slide">
-    <h1>Contatti</h1>
-    <h3>something about contatti</h3>
-  </section>
-  <section id="sostenibilita" class="et-slide">
-    <h1>Sostenibilità</h1>
-    <h3>something about sostenibilità</h3>
-  </section>
+
+  <!-- Ripeti la struttura sopra per le altre sezioni -->
 </main>
