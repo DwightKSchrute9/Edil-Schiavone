@@ -1,67 +1,194 @@
-// Stili per il componente home
+// // Stili per il componente home
 
-.skyscraper-container {
-  background: linear-gradient(200deg, hsl(190, 10%, 10%), hsl(220, 30%, 30%)) no-repeat;
-  background-attachment: fixed;
-  display: grid;
-  height: 100vh;
-  margin: 0;
-  padding: 0 1vw;
-  position: relative;
-  z-index: 0; // Imposta uno z-index inferiore per i grattacieli
+// .skyscraper-container {
+//   background: linear-gradient(200deg, hsl(190, 10%, 10%), hsl(220, 30%, 30%)) no-repeat;
+//   background-attachment: fixed;
+//   display: grid;
+//   height: 100vh;
+//   margin: 0;
+//   padding: 0 1vw;
+//   position: relative;
+//   z-index: 0; // Imposta uno z-index inferiore per i grattacieli
 
-  form {
-    display: grid;
-    gap: 1vw;
-    grid-auto-flow: column;
-    max-height: 85vh;
-    padding: 2vh 0;
-    position: relative;
-    z-index: 1; // Imposta uno z-index superiore per il contenuto del form
+//   form {
+//     display: grid;
+//     gap: 1vw;
+//     grid-auto-flow: column;
+//     max-height: 85vh;
+//     padding: 2vh 0;
+//     position: relative;
+//     z-index: 1; // Imposta uno z-index superiore per il contenuto del form
 
-    fieldset {
-      background: hsl(190, 10%, 10%);
-      border: 0;
-      display: grid;
-      gap: var(--gap, 2vw);
-      grid-template-columns: repeat(var(--windows, 4), 1fr);
-      margin: 0;
-      padding: var(--p, 3vw 2vw);
-      position: relative;
+//     fieldset {
+//       background: hsl(190, 10%, 10%);
+//       border: 0;
+//       display: grid;
+//       gap: var(--gap, 2vw);
+//       grid-template-columns: repeat(var(--windows, 4), 1fr);
+//       margin: 0;
+//       padding: var(--p, 3vw 2vw);
+//       position: relative;
 
-      [type=checkbox] {
-        all: unset;
-        aspect-ratio: 1 / 1.25;
-        background: hsl(190, 10%, 20%);
-        transition: background .3s ease-in;
-        width: 100%;
+//       [type=checkbox] {
+//         all: unset;
+//         aspect-ratio: 1 / 1.25;
+//         background: hsl(190, 10%, 20%);
+//         transition: background .3s ease-in;
+//         width: 100%;
 
-        &:checked {
-          background: #ffffae;
-        }
-      }
+//         &:checked {
+//           background: #ffffae;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // Aggiungi media query per dispositivi mobili
+// @media (max-width: 768px) {
+//   .skyscraper-container {
+//     body {
+//       background: linear-gradient(200deg, hsl(190, 10%, 10%), hsl(220, 30%, 30%)) no-repeat;
+//       background-attachment: fixed;
+//       display: grid;
+//       height: 100vh;
+//       margin: 0;
+//       padding: 0 1vw;
+//     }
+
+//     form {
+//       display: grid;
+//       gap: 1vw;
+//       grid-auto-flow: column;
+//       max-height: 100%;
+//       padding: 2vh 0;
+//     }
+//   }
+// }
+
+
+.custom-image {
+  width: 80px;
+  height: 40px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.custom-image:hover {
+  transform: scale(1.5);
+}
+
+
+
+button{
+  color: #000;
+  background-color: #eee;
+}
+
+nav,a , ul, li{
+  height: 15vh;
+  display: flex;
+
+  align-items: center;
+  color: #000;
+}
+
+/* Aggiungiamo queste regole per centrare e spaziare uniformemente le voci della navbar */
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Centralizza orizzontalmente */
+  flex: 3; /* Espande le voci per riempire l'intera larghezza */
+  &.nav-fill {
+    .nav-item {
+      flex: 3; /* Distribuisci uniformemente le voci */
     }
   }
 }
 
-// Aggiungi media query per dispositivi mobili
-@media (max-width: 768px) {
-  .skyscraper-container {
-    body {
-      background: linear-gradient(200deg, hsl(190, 10%, 10%), hsl(220, 30%, 30%)) no-repeat;
-      background-attachment: fixed;
-      display: grid;
-      height: 100vh;
-      margin: 0;
-      padding: 0 1vw;
-    }
+.et-hero-tabs,
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: #eee;
+  text-align: center;
+  padding: 0 2em;
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+  }
+}
 
-    form {
-      display: grid;
-      gap: 1vw;
-      grid-auto-flow: column;
-      max-height: 100%;
-      padding: 2vh 0;
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+  color: #000;
+  &--top {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+  text-decoration: none;
+  &:hover {
+    color: white;
+    background: rgba(102, 177, 241, 0.8);
+    transition: all 0.5s ease;
+  }
+}
+
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66B1F1;
+  transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+  /* Stili per schermi larghi */
+  .et-hero-tabs,
+  .et-slide {
+    h1 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 1rem;
     }
   }
+  .et-hero-tab {
+    font-size: 1rem;
+  }
+}
+
+.et-hero-tabs-container--sticky {
+  position: sticky;
+  top: 0;
+  /* Altri stili CSS desiderati quando diventa sticky */
 }
