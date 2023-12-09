@@ -29,7 +29,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 @Component({
   selector: 'app-chi-siamo',
   templateUrl: './chi-siamo.component.html',
-  styleUrls: ['./chi-siamo.component.css'],
+  styleUrls: ['./chi-siamo.component.scss'],
   animations: [
     trigger('scrollAnimation', [
       state('show', style({

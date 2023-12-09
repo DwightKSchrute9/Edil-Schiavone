@@ -1,19 +1,32 @@
-/* chi-siamo.component.css */
-#chi-siamo {
-  position: relative;
-  // background-image: url('url-dell-immagine.jpg');
-  background-size: cover;
+// /* chi-siamo.component.css */
+// #chi-siamo {
+//   position: relative;
+//   //background-image: url('url-dell-immagine.jpg');
+//   background-size: cover;
+//   background-attachment: fixed;
+//   background-position: center;
+//   min-height: 100vh;
+// }
+
+
+
+// .section {
+//   padding: 20px;
+//   /* Altri stili per le sezioni */
+// }
+
+
+.background-image {
+  background-image: url('../../assets/wright1.jpg');  /* Usa due punti (..) per risalire di una directory e raggiungere la cartella "assets". */
   background-attachment: fixed;
   background-position: center;
-  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .content {
-  background-color: rgba(255, 255, 255, 0.9); /* Sfondo opaco sopra l'immagine */
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
-}
-
-.section {
-  padding: 20px;
-  /* Altri stili per le sezioni */
+  border-radius: 10px;
 }
